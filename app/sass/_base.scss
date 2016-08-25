@@ -1,0 +1,44 @@
+@import "bourbon";
+@import "vars";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+section,
+footer {
+	padding: 90px 0;
+	.section_descr {
+		z-index: 2;
+		text-align: center;
+		h2 {
+			font-family: $kaushan;
+			font-weight: 400;
+			font-size: 24px;
+			color: #333;
+		}
+		.header_descr {
+			margin-top: 25px;
+			text-transform: uppercase;
+			font-family: $montserrat;
+			font-weight: 700;
+			font-size: 30px;
+			color: #333;
+			&:after {
+				padding-top: 25px;
+				content: '';
+				display: block;
+				margin: 0 auto;
+				width: 60px;
+				border-bottom: 2px solid #f38181;
+			}
+		}
+		p {
+			margin-top: 25px;
+			font-family: $roboto;
+			font-weight: 400;
+			font-size: 15px;
+			color: #999;
+		}
+	}
+}

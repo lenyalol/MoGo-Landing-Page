@@ -1,0 +1,463 @@
+@import "bourbon";
+@import "vars";
+@import "libs";
+
+.what_we_do {
+	.team_block {
+		margin-top: 100px;
+		position: relative;
+		top: 0;
+		left: 0;
+		@include transition(0.3s);
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(#f38181, #fce38a);
+			opacity: 0;
+			@include transition(0.3s);
+		}
+		&:hover {
+			top: -5px;
+			left: -5px;
+			&:before {
+				opacity: 0.85;
+			}
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
+.achievements {
+	background-color: #95e1d3;
+	color: #fff;
+	font-family: $montserrat;
+	padding: 0;
+	.achievements_wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		.achievement {
+			padding: 90px 0;
+			border-left: 1px solid #b5eae0;
+			text-align: center;
+			flex-basis: 20%;
+			&:last-child {
+				border-right: 1px solid #b5eae0;
+			}
+		}
+		h3 {
+			font-weight: 700;;
+			font-size: 72px;
+		}
+		p {
+			font-weight: 400;
+			font-size: 14px;
+		}
+	}
+}
+.we_work_with {
+	.services {
+		margin-top: 50px;
+		.service {
+			height: 250px;
+			img {
+				width: 32px;
+				float: left;
+			}
+			.service_text {
+				padding-left: 50px;
+				h3 {
+					font-family: $montserrat;
+					font-weight: 400;
+					font-size: 14px;
+					text-transform: uppercase;
+					color: #333;
+					margin-bottom: 20px;
+				}
+				p {
+					font-family: $roboto;
+					font-size: 15px;
+					color: #999;
+				}
+			}
+		}
+	}
+}
+.for_all_devices {
+	background: url('../img/for_all_devices_bg.jpg') no-repeat center;
+	background-size: cover;
+	padding: 0;
+	.wrapper {
+		padding-top: 90px;
+		background-color: rgba(255, 255, 255, 0.7);
+		.devices {
+			margin-top: 50px;
+			text-align: center;
+			position: relative;
+			.iphone {
+				position: absolute;
+				right: 20%;
+				bottom: -95px;
+			}
+		}
+	}
+}
+.what_we_do {
+	img {
+		width: 100%;
+	}
+	.what_we_do_main {
+		margin-top: 50px;
+	}
+	.accordion {
+		h2 {
+			background: url('../img/accordion_sprite.png') no-repeat;
+			background-position-x: 10px;
+			padding: 20px 20px 20px 50px;
+			border: 1px solid #e5e5e5;
+			text-transform: uppercase;
+			font-family: $montserrat;
+			font-size: 14px;
+			font-weight: 400;
+			color: #333;
+			margin-bottom: 10px;
+			@include transition(0.5s);
+			.fa {
+				float: right;
+				font-size: 40px;
+				color: #ccc;
+				position: relative;
+				top: -10px;
+			}
+			.fa-angle-down{
+				display: inline-block;
+				cursor: pointer;
+			}
+			.fa-angle-up{
+				display: none;
+			}
+		}
+		.active {
+			.fa-angle-down{
+				display: none;
+			}
+			.fa-angle-up{
+				display: inline-block;
+				cursor: pointer;
+			}
+		}
+		.photography {
+			background-position-y: 15px;
+		}
+		.creativity {
+			background-position-y: -100px;
+		}
+		.design {
+			background-position-y: -235px;
+		}
+		p {
+			border: 1px solid #e5e5e5;
+			border-top: none;
+			padding: 20px;
+			font-family: $roboto;
+			font-weight: 300;
+			font-style: italic;
+			font-size: 15px;
+			color: #bfbfbf;
+			height: 140px;
+			margin-bottom: 10px;
+			margin-top: -10px;
+			overflow-y: auto;
+		}
+	}
+}
+.comment {
+	background-color: #f8f8f8;
+	.owl-carousel {
+		position: relative;
+		.owl-controls {
+			position: absolute;
+			width: 100%;
+			top: 30%;
+			font-size: 40px;
+			color: #ccc;
+			.owl-prev {
+				float: left;
+			}
+			.owl-next {
+				float: right;
+			}
+		}
+		img {
+			float: left;
+			border: 2px solid #95e1d3;
+			padding: 45px;
+			margin-right: 60px;
+		}
+		.comment_text {
+			p {
+				font-family: $roboto;
+				font-weight: 300;
+				font-style: italic;
+				font-size: 24px;
+				color: #999;
+			}
+			.comment_descr {
+				font-family: $kaushan;
+				font-size: 24px;
+				&:before {
+					content: '';
+					display: inline-block;
+					width: 55px;
+					position: relative;
+					top: -5px;
+					border-bottom: 3px solid #f38181;
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+.who_we_are {
+	.teammates {
+		margin-top: 50px;
+		.teammate {
+			position: relative;
+			top: 0;
+			left: 0;
+			@include transition(0.5s);
+			&:hover {
+				top: -5px;
+				left: -5px;
+				&:before {
+					opacity: 0.7;
+				}
+				&:after {
+					opacity: 1;
+				}
+				.links {
+					opacity: 1;
+				}
+			}
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background: linear-gradient(#f38181, #fce38a);
+				opacity: 0;
+				@include transition(0.5s);
+			}
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				height: 100%;
+				width: 100%;
+				background-color: #95e1d3;
+				opacity: 0;
+				z-index: -1;
+				@include transition(0.5s);
+			}
+			.links {
+				opacity: 0;
+				position: absolute;
+				top: 45%;
+				left: 25%;
+				margin: 0 auto;
+				@include transition(0.5s);
+				li {
+					float: left;
+					list-style-type: none;
+					border-right: 1px solid #f38181;
+					background-color: #fce38a;
+					font-size: 22px;
+					line-height: 50px;
+					width: 50px;
+					height: 50px;
+					text-align: center;
+					color: #f38181;
+					margin: 0;
+					&:last-child {
+						border-right: none;
+					}
+					&:hover {
+						color: #fff;
+						background-color: #f3818f;
+						cursor: pointer;
+					}
+				}
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+.brands {
+	background-color: #f8f8f8;
+	.hipster {
+		background: url('../img/hipster_sprite.png') no-repeat;
+		height: 127px;
+	}
+	.hipster1 {
+		background-position-x: 40px;
+	}
+	.hipster2 {
+		background-position-x: -175px;
+	}
+	.hipster3 {
+		background-position-x: -380px;
+	}
+	.hipster4 {
+		background-position-x: -600px;
+	}
+	.hipster5 {
+		background-position-x: -810px;
+	}
+	.hipster6 {
+		background-position-x: -1028px;
+	}
+}
+.portfolio {
+	padding-bottom: 0;
+	.masonry {
+		margin-top: 50px;
+	}
+	.masonry,
+	.portfolio_item {
+		padding: 0;
+	}
+	.portfolio_item {
+		width: 25%;
+		height: 35vh;
+	}
+	.portfolio_item_high {
+		height: 70vh;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+.comment_light {
+	background-color: #fff;
+	#carousel_light {
+		img {
+			padding: 0;
+			border: none;
+			border-radius: 50%;
+		}
+	}
+}
+.happy_clients {
+	background: url('../img/happy_clients_bg.jpg') no-repeat center;
+	background-size: cover;
+	.comments {
+		margin-top: 50px;
+		.commentator {
+			margin-bottom: 40px;
+			img {
+				float: left;
+				border-radius: 50%;
+			}
+			.comment_wrap {
+				padding-left: 140px;
+				h3 {
+					font-family: $montserrat;
+					font-weight: 400;
+					font-size: 14px;
+					margin-bottom: 5px;
+				}
+				.commentator_name {
+					font-family: $roboto;
+					font-weight: 300;
+					font-style: italic;
+					font-size: 14px;
+					margin-bottom: 10px;
+					&:after {
+						margin-top: 5px;
+						content: '';
+						display: block;
+						width: 60px;
+						border-bottom: 2px solid #f38181;
+					}
+				}
+				p {
+					font-family: $roboto;
+					font-size: 15px;
+					color: #999;
+				}
+			}
+		}
+	}
+}
+.our_stories {
+	.articles {
+		margin-top: 50px;
+		article {
+			.wrapper {
+				position: relative;
+				margin-bottom: 15px;
+				img {
+					width: 100%;
+				}
+				.date {
+					position: absolute;
+					bottom: 20px;
+					left: -10px;
+					padding: 15px;
+					background-color: #95e1d3;
+					text-align: center;
+					color: #fff;
+					.day {
+						font-family: $montserrat;
+						font-weight: 700;
+						font-size: 30px;
+					}
+					.month {
+						font-family: $roboto;
+						font-weight: 300;
+						font-style: italic;
+					}
+				}
+			}
+			h3 {
+				font-family: $montserrat;
+				font-weight: 400;
+				font-size: 14px;
+				text-transform: uppercase;
+				margin-bottom: 10px;
+			}
+			p {
+				font-family: $roboto;
+				font-size: 15px;
+				color: #999;
+			}
+			hr {
+				border-size: 2px;
+			}
+			.stat {
+				display: inline-block;
+				margin-right: 10px;
+				color: #999;
+			}
+		}
+	}
+}
+footer {
+	background-color: #ccc;
+}
+@import "media";

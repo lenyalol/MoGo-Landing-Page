@@ -1,0 +1,134 @@
+@import "bourbon";
+@import "vars";
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	header .header_main {
+		margin-top: 0;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	header .top_line .top_navigation {
+		padding-top: 15px;
+	}
+	.achievements .achievements_wrapper h3 {
+		font-size: 65px;
+	}
+	.achievements .achievements_wrapper p {
+		font-size: 9px;
+	}
+	.for_all_devices .wrapper .devices .iphone {
+		right: 6%;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	header .top_line .logo {
+		float: none;
+		text-align: center;
+	}
+	header .top_line .top_navigation {
+		width: 100%;
+		text-align: center;
+	}
+	header .top_line .top_navigation li {
+		margin-left: 30px;
+	}
+	header .top_line .top_navigation li a {
+		font-size: 10px;
+	}
+	header .header_main .header_descr {
+		margin-top: 0;
+	}
+	.achievements .achievements_wrapper .achievement {
+		flex-basis: 100%;
+		border-left: none;
+		border-bottom: 1px solid #b5eae0;
+		padding: 40px 0;
+		&:last-child {
+			border: none;
+		}
+	}
+	.for_all_devices .wrapper .devices .iphone {
+		// right: -5%;
+	}
+	.what_we_do img {
+		margin-bottom: 15px;
+	}
+	.comment .owl-carousel img {
+		float: none;
+		display: block;
+		margin: 0 auto 15px auto;
+	}
+	.who_we_are .teammates .teammate {
+		margin-bottom: 15px;
+	}
+	.portfolio .portfolio_item {
+		width: 100%;
+		height: auto;
+	}
+	.our_stories article {
+		margin-bottom: 15px;
+	}
+
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	header .top_line .logo {
+		font-size: 20px;
+	}
+	header .header_main .header_button {
+		padding: 5px 25px;
+		font-size: 12px;
+	}
+	.what_we_do .team_block {
+		margin-top: 15px;
+	}
+	.for_all_devices .ipad {
+		width: 100%;
+	}
+	.for_all_devices .iphone {
+		width: 70%;
+	}
+	.comment .owl-carousel img {
+		width: 70%;
+	}
+	.comment .owl-carousel .comment_text p {
+		font-size: 20px;
+	}
+	.happy_clients .comments .commentator img {
+		width: 30%;
+	}
+	.happy_clients .comments .commentator .comment_wrap {
+		padding-left: 100px;
+	}
+}
